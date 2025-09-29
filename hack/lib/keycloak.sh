@@ -106,7 +106,7 @@ function start_keycloak() {
     -p 8443:8443 \
     -p 8081:8080 \
     -p 9000:9000 \
-    -v "${KEYCLOAK_CERTS}:/opt/keycloak/conf/certs" \
+    -v "${KEYCLOAK_CERTS}:/opt/keycloak/conf/certs:Z" \
     -e KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_ADMIN} \
     -e KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD} \
     -e KC_HOSTNAME=localhost \
